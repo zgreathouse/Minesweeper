@@ -8,11 +8,13 @@
  - Webpack
 
 ### Features
- - Interactive and fluid UI which re-renders live upon exploring or flagging different positions on the grid.
+ - Interactive, fluid UI which triggers re-renders live upon exploring or flagging different positions on the grid.
 
 ### What's to come?
  - Adjustable grid size.
  - Increase or decrease the amount of bombs within the grid.
+ - Preset difficulty levels
+ - Explosion animations upon selecting a bomb
 
 ### These are the steps to run the project locally:
  - Fork repository
