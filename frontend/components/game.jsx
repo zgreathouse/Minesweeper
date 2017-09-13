@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import * as Minesweeper from '../../minesweeper';
+
 //components
 import Board from './board';
 
@@ -7,13 +9,11 @@ class Game extends Component {
 
   constructor(props) {
     super(props);
-
     const board = new Minesweeper.Board(9, 10);
 
-    this.state {
-      board,
-    }
-
+    //initial state
+    this.state = { board: board }
+    //bound methods
     this.updateGame = this.updateGame.bind(this);
   }
 
