@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import * as Minesweeper from '../../minesweeper';
 
 //components
@@ -18,7 +17,7 @@ class Game extends Component {
   }
 
   updateGame(){
-
+    
   }
 
   render() {

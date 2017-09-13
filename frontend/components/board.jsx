@@ -16,6 +16,7 @@ class Board extends Component {
   renderRows() {
     const board = this.props.board;
 
+    //map over rows of board's grid
     return board.grid.map( (row, i) => {
       return (
         <div className="row" key={`row-${i}`}>
@@ -28,6 +29,7 @@ class Board extends Component {
   renderTiles(row, i){
     const board = this.props.board;
 
+    //map over tiles of a given row
     return row.map( (tile, j) => {
       return (
         <Tile
@@ -39,9 +41,6 @@ class Board extends Component {
   }
 
   render() {
-    const board = this.props.board;
-    const that = this;
-    
     return(
       <div id="board">
         {this.renderRows()}
