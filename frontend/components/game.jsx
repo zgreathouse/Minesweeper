@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 
+//components
+import Board from './board';
+
 class Game extends Component {
 
   constructor(props) {
     super(props);
 
+    const board = new Minesweeper.Board(9, 10);
+
     this.state {
-      board: board,
+      board,
     }
 
     this.updateGame = this.updateGame.bind(this);
