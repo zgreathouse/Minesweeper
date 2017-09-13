@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+//components
+import Game from './components/game';
+
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(/* Root Component */, document.getElementById('main'));
+  ReactDOM.render(<Game/>, document.getElementById('main'));
 });

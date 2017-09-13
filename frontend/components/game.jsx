@@ -5,14 +5,25 @@ class Game extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      board: this.props.board,
+    this.state {
+      board: board,
     }
+
+    this.updateGame = this.updateGame.bind(this);
+  }
+
+  updateGame(){
+
   }
 
   render() {
     return (
-      <h1>minesweeper</h1>
+      <div>
+        <h1>Minesweeper</h1>
+        <Board board={this.state.board} update={this.updateGame} />
+      </div>
     );
   }
 }
+
+export default Game;
