@@ -9,6 +9,7 @@ class Board extends Component {
   constructor(props) {
     super(props);
 
+    //bound methods
     this.renderRows = this.renderRows.bind(this);
     this.renderTiles = this.renderTiles.bind(this);
   }
@@ -17,16 +18,16 @@ class Board extends Component {
     const board = this.props.board;
 
     //map over rows of board's grid
-    return board.grid.map( (row, i) => {
+    return board.grid.map( (row, index) => {
       return (
-        <div className="row" key={`row-${i}`}>
-          {this.renderTiles(row, i)}
+        <div className="row" key={`row-${index}`}>
+          {this.renderTiles(row, index)}
         </div>
       );
     });
   }
 
-  renderTiles(row, i){
+  renderTiles(row, index){
     const board = this.props.board;
 
     //map over tiles of a given row
@@ -35,13 +36,13 @@ class Board extends Component {
         <Tile
           tile={tile}
           updateGame={this.props.updateGame}
-          key={i * board.gridSize + j} />
+          key={index * board.gridSize + j} />
       );
     });
   }
 
   render() {
-    return(
+    return (
       <div id="board">
         {this.renderRows()}
       </div>

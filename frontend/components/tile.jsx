@@ -6,6 +6,7 @@ class Tile extends Component {
   constructor(props) {
     super(props);
 
+    //bound methods
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -18,10 +19,12 @@ class Tile extends Component {
     const tile = this.props.tile;
     let klass, text, count;
 
+    //assign a klass for the className and text based on
+    //the different states of a given tile
     if (tile.explored) {
-      if (this.bombed) {
+      if (tile.bombed) {
         klass = 'bombed';
-        text = '\u2622';
+        text = '';
       } else {
         klass = 'explored';
         count = tile.adjacentBombCount();
@@ -29,9 +32,9 @@ class Tile extends Component {
       }
     } else if (tile.flagged) {
       klass = 'flagged';
-      text = '\u2622';
+      text = '';
     } else {
-      klass = 'unexplored'
+      klass = 'unexplored';
     }
 
     klass = `tile ${klass}`;

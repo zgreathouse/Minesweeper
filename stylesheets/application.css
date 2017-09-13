@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 auto;
+  font-size: 60px;
+  text-align: center;
+  font-family:  serif;
+}
+
+.directions {
+  font-size: 18px;
+  text-align: center;
+}
+
+.row {
+  width: 460px;
+  margin: 0 auto;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tile {
+  height: 40px;
+  width: 40px;
+  background: lightgray;
+  float: left;
+  border-style: outset;
+  border-width: 4px;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  background-color: #bbb;
+}
+
+.tile:hover {
+  background-color: #999;
+}
+
+.explored {
+  border-style: inset;
+}
+
+.bombed {
+  background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/54644-200.png');
+  background-size: contain;
+}
+
+.flagged {
+  background-image: url('http://files.softicons.com/download/application-icons/toolbar-icons-by-gentleface/png/512/flag.png');
+  background-size: contain;
+}
+
+
+/**** Game End Modal ****/
+.modal-screen {
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  height: 100%;
+  background: rgba(100, 100, 100, .3);
+}
+
+.modal-content {
+  z-index: 2;
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 32px;
+  width: 300px;
+  height: 180px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.modal-text {
+  font-size: 32;
+}
+
+.modal-button {
+  width: 100px;
+  height: 33px;
+  border-radius: 5px;
+  background-color: #eee;
+  font-size: 13px;
+}
